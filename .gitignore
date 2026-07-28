@@ -1,0 +1,23 @@
+.gradle
+build/
+/gradle/
+
+
+### IntelliJ IDEA ###
+*.idea
+*.iws
+*.iml
+*.ipr
+out/
+settings.gradle
+gradlew.bat
+\gradlew
+gradlew
+
+
+### Mac OS ###
+.DS_Store
+
+*.log
+*.png
+
