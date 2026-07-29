@@ -58,4 +58,9 @@ public class TestBase {
             return true;
         }
     }
+    public String newEmail(){
+        int i = (int) ((System.currentTimeMillis()/1000)%3600);
+        String email = "karl" + i + "@gmail.com";
+        return email;
+    }
 }
