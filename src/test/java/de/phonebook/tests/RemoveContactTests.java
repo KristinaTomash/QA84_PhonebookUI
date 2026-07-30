@@ -10,10 +10,12 @@ public class RemoveContactTests extends TestBase {
     @BeforeMethod
     public void precondition(){
         clickOnLoginLink();
-        fillLogiRegisterForm("kristitomash@gmail.com", "Aa12345!");
+        fillLogiRegisterForm(new User()
+                .setEmail("kristitomash@gmail.com")
+                .setPassword("Aa12345!"));
         clickOnLoginButton();
         clickOnAddLink();
-        fillAddContactForm("Oliver", "Kan", "1234567890", "kan@gmail.com", "TelAviv", "QA");
+        fillAddContactForm(new Contact("Oliver", "Kan", "1234567890", "kan@gmail.com", "TelAviv", "QA"));
         clickOnSaveButton();
 
     }

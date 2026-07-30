@@ -74,9 +74,9 @@ public class TestBase {
         click(By.name("registration"));
     }
 
-    public void fillLogiRegisterForm(String email, String password) {
-        type(By.name("email"), email);
-        type(By.name("password"), password);
+    public void fillLogiRegisterForm(User user) {
+        type(By.name("email"), user.getEmail());
+        type(By.name("password"), user.getPassword());
     }
 
     public void clickOnLoginLink() {
@@ -91,16 +91,14 @@ public class TestBase {
         click(By.cssSelector(".add_form__2rsm2 button"));
     }
 
-    public void fillAddContactForm(String name, String lastName,
-                                   String phone, String email,
-                                   String address, String description) {
+    public void fillAddContactForm(Contact contact) {
 
-        type(By.xpath("//input[1]"), name);
-        type(By.xpath("//input[2]"), lastName);
-        type(By.xpath("//input[3]"), phone);
-        type(By.xpath("//input[4]"), email);
-        type(By.xpath("//input[5]"), address);
-        type(By.xpath("//input[6]"), description);
+        type(By.xpath("//input[1]"), contact.name());
+        type(By.xpath("//input[2]"), contact.lastName());
+        type(By.xpath("//input[3]"), contact.phone());
+        type(By.xpath("//input[4]"), contact.email());
+        type(By.xpath("//input[5]"), contact.address());
+        type(By.xpath("//input[6]"), contact.description());
     }
 
     public void clickOnAddLink() {
