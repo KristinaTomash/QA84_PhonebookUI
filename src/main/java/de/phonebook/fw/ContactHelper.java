@@ -1,6 +1,7 @@
 package de.phonebook.fw;
 
 import de.phonebook.core.BaseHelper;
+import de.phonebook.model.Contact;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

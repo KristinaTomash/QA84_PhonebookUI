@@ -25,7 +25,6 @@ public class BaseHelper  {
         driver.findElement(locator).clear();
         driver.findElement(locator).sendKeys(text);
     }
-
     public void click(By locator) {
         driver.findElement(locator).click();
     }
@@ -36,10 +35,10 @@ public class BaseHelper  {
         if(alert == null){
             return false;
         }else {
+            driver.switchTo().alert().accept();//click on OK button
             return true;
         }
     }
-
     public void pause(int millis){
         try {
             Thread.sleep(millis);

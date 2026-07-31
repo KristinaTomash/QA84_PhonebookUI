@@ -1,5 +1,6 @@
 package de.phonebook.tests;
 
+import de.phonebook.core.TestBase;
 import de.phonebook.model.Contact;
 import de.phonebook.model.User;
 import org.testng.Assert;
@@ -11,6 +12,11 @@ public class RemoveContactTests extends TestBase {
 
     @BeforeMethod
     public void precondition(){
+
+        if (!app.getUser().isLoginLinkPresent()){
+            app.getUser().clickOnSignOutButton();
+        }
+
         app.getUser().clickOnLoginLink();
         app.getUser().fillLogiRegisterForm(new User()
                 .setEmail("kristitomash@gmail.com")
